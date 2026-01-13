@@ -1,0 +1,29 @@
+@startuml
+left to right direction
+
+actor 生徒 as g
+actor 先生 as h
+
+package el-campus {
+  usecase "課題提出" as UC1
+  usecase "お知らせ" as UC2
+  usecase "ダウンロード" as UC3
+  usecase "出席" as UC4
+}
+
+package ユニパ {
+  usecase "履修登録" as UC5
+  usecase "シラバス" as UC6
+}
+
+g --> UC5
+g --> UC6
+g --> UC1
+g --> UC2
+g --> UC3
+
+UC1 <-- h
+UC4 <-- h
+UC6 <-- h
+
+@enduml
