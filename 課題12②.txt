@@ -1,0 +1,7 @@
+@startuml
+skinparam sequenceMessageAlign right
+MainFunction->calculate:データ計算
+calculate->getInput:計算結果
+getInput-->calculate:結果
+calculate-->MainFunction:結果
+@enduml
