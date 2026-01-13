@@ -1,0 +1,7 @@
+@startuml
+skinparam sequenceMessageAlign right
+クライアント->サーバー:データ要求
+サーバー->データベース:問い合わせ
+データベース->サーバー:データ
+サーバー->クライアント:データ
+@enduml
